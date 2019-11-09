@@ -1,0 +1,73 @@
+@import 'mixin';
+$fontAlt:'IBM Plex Sans', sans-serif;
+$color:#913BFB;
+* {
+	box-sizing: border-box;
+	margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+body {
+	width: 100%;
+  height: 100%;
+  font-family: $fontAlt;
+}
+header {
+	@include center;
+  a {
+		@include tag_a_head(14px, $color, #000, solid);
+	}
+}
+#head_info {
+	@include grid(20% 24% 20% 15%);
+   padding-top: 10px;
+
+}
+// Шапка с лого
+#logo {
+	width: 200px;
+	 img {
+		 width: 220px;
+	 }
+}
+// официальная мастерская 
+#mtrf {
+	display: flex;
+	align-items: center;
+}
+.textmtrf p{
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: center;
+}
+.logomtrf {
+	width: 35%;
+	height: 50px;
+	background-image: url('../img/mtrf.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+#phone {
+  p {
+		position: relative;
+	}
+  a {
+		font-size: 18px;
+		font-weight: 600;
+	}
+	a:not(.fisrt_phone){
+		@include tag_a_head(13px, #000, $color, dashed );
+		margin-left: 18px;
+		font-weight: 400;
+		&:before {
+			@include before('../img/smartphone-call.svg', 15px)
+		}
+	}
+}
+//Footer
+footer {
+	background: $color;
+	height: 200px;
+}

@@ -1,0 +1,38 @@
+@mixin block_content {
+	width: 100%;
+	padding-bottom: 30px;
+}
+@mixin center {
+	margin: 0 auto;
+	width: 1070px;
+	height: auto;
+}
+@mixin grid($colums...){
+	display: grid;
+	height: 100%;
+	justify-content: space-between;
+	grid-template-columns: $colums;
+}
+@mixin tag_a_head ($size, $color, $color_hover, $style:none) {
+	color: $color;
+	font-size: $size;
+	text-decoration: none;
+	border-bottom: 1px $style $color;
+
+	&:hover {
+		border-bottom: 1px $style $color_hover;
+		color: $color_hover;
+	}
+}
+@mixin before($url, $size) {
+	content: '';
+  background-image: url($url);
+  background-size: $size $size;
+  background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+  position: absolute;
+	left: 0;
+	background-position: 0px 5px;
+	
+}

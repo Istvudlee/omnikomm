@@ -1,0 +1,116 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+header {
+  margin: 0 auto;
+  width: 1070px;
+  height: auto;
+}
+
+header a {
+  color: #913BFB;
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 1px solid #913BFB;
+}
+
+header a:hover {
+  border-bottom: 1px solid #000;
+  color: #000;
+}
+
+#head_info {
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-grid-columns: 20% 24% 20% 15%;
+      grid-template-columns: 20% 24% 20% 15%;
+  padding-top: 10px;
+}
+
+#logo {
+  width: 200px;
+}
+
+#logo img {
+  width: 220px;
+}
+
+#mtrf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.textmtrf p {
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.logomtrf {
+  width: 35%;
+  height: 50px;
+  background-image: url("../img/mtrf.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#phone p {
+  position: relative;
+}
+
+#phone a {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#phone a:not(.fisrt_phone) {
+  color: #000;
+  font-size: 13px;
+  text-decoration: none;
+  border-bottom: 1px dashed #000;
+  margin-left: 18px;
+  font-weight: 400;
+}
+
+#phone a:not(.fisrt_phone):hover {
+  border-bottom: 1px dashed #913BFB;
+  color: #913BFB;
+}
+
+#phone a:not(.fisrt_phone):before {
+  content: '';
+  background-image: url("../img/smartphone-call.svg");
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background-position: 0px 5px;
+}
+
+footer {
+  background: #913BFB;
+  height: 200px;
+}
+/*# sourceMappingURL=style.css.map */
