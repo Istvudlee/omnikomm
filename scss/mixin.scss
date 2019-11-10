@@ -5,7 +5,7 @@
 @mixin center {
 	margin: 0 auto;
 	width: 1070px;
-	height: auto;
+
 }
 @mixin grid($colums...){
 	display: grid;
@@ -24,7 +24,7 @@
 		color: $color_hover;
 	}
 }
-@mixin before($url, $size) {
+@mixin before($url, $size, $position...) {
 	content: '';
   background-image: url($url);
   background-size: $size $size;
@@ -33,6 +33,6 @@
 	height: 100%;
   position: absolute;
 	left: 0;
-	background-position: 0px 5px;
+	background-position: $position;
 	
 }
