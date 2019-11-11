@@ -1,8 +1,10 @@
 'use strict'
-let headMenu = document.getElementById('head_menu')
+let headMenu = document.getElementById('head_menu');
 let click_menu = document.querySelectorAll('.click_menu');
-let child_menu = document.querySelectorAll('.child_menu')
-
+let child_menu = document.querySelectorAll('.child_menu');
+let imgMenuBurger = document.querySelector('.img_menu_burger');
+let closeBurger = document.querySelector('.close_burger')
+let mobileBurger = document.getElementById('mobile_burger')
 
 click_menu.forEach(item => item.addEventListener('click', clickMenuChild))
 
@@ -30,3 +32,11 @@ function linkActive(target, arrElem, nameClassCss) {
 	});
 
 }
+
+// Бургер меню
+imgMenuBurger.addEventListener('click', () => {
+	mobileBurger.style.display = 'grid'
+})
+closeBurger.addEventListener('click', () => {
+	mobileBurger.style.display = 'none'
+})

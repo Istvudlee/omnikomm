@@ -4,7 +4,7 @@
 }
 @mixin center {
 	margin: 0 auto;
-	width: 1070px;
+	max-width: 1070px;
 
 }
 @mixin grid($colums...){
@@ -35,4 +35,8 @@
 	left: 0;
 	background-position: $position;
 	
+}
+@mixin gridMob{
+	justify-content: space-evenly;
+	grid-template-columns: 92%;
 }
