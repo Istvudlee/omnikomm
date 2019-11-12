@@ -397,7 +397,7 @@ header {
 
 #second_product .text_product p::before {
   content: '';
-  background-image: url("../img/check-symbol1.svg");
+  background-image: url("../img/check-mark.svg");
   background-size: 10px 10px;
   background-repeat: no-repeat;
   width: 100%;

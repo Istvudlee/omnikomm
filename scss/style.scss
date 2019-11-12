@@ -286,7 +286,7 @@ header {
      p {
 			position: relative;
 			 &::before {
-				 @include before('../img/check-symbol1.svg', 10px, 0px 5px)
+				 @include before('../img/check-mark.svg', 10px, 0px 5px)
 			 }
       padding-left: 15px;
 		 }
