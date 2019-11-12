@@ -20,12 +20,12 @@ body {
 header {
   margin: 0 auto;
   max-width: 1070px;
+  height: 100%;
 }
 
 #head_info {
   display: -ms-grid;
   display: grid;
-  height: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -123,7 +123,6 @@ header {
 #head_menu {
   display: -ms-grid;
   display: grid;
-  height: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -257,9 +256,9 @@ footer {
 #footer_info {
   margin: 0 auto;
   max-width: 1070px;
+  height: 100%;
   display: -ms-grid;
   display: grid;
-  height: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -290,9 +289,9 @@ footer {
   padding-top: 5px;
   margin: 0 auto;
   max-width: 1070px;
+  height: 100%;
   display: -ms-grid;
   display: grid;
-  height: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -395,7 +394,6 @@ footer {
   #head_info #phone_mobile {
     display: -ms-grid;
     display: grid;
-    height: 100%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
