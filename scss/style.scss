@@ -1,22 +1,26 @@
 @import 'mixin';
-$fontOne:'IBM Plex Sans', sans-serif;
-$fontTwo: 'Montserrat', sans-serif;
+$fontOne:'IBM Plex Sans',
+sans-serif;
+$fontTwo: 'Montserrat',
+sans-serif;
 $color:#913BFB;
-$colorTwo:#10ACD5; 
+$colorTwo:#10ACD5;
 $colorThree:#00b293; //#a7b200
 $colorTextBaner:#3f3a3a;
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	border: 0;
 	outline: 0;
-	
+
 }
 
 ul {
 	list-style: none;
 }
+
 body {
 	width: 100%;
 	height: 100%;
@@ -31,16 +35,20 @@ header {
 #head_info {
 	@include grid(auto auto auto auto);
 	padding-top: 10px;
-  a {
+
+	a {
 		@include tag_a_head(14px, $color, #000, solid);
 	}
+
 	#phone_mobile {
 		display: none;
 	}
 }
+
 #mobile_burger {
 	display: none;
 }
+
 // Шапка с лого
 #logo {
 	width: 220px;
@@ -131,80 +139,93 @@ header {
 			color: #fff;
 		}
 	}
+
 	.link_headMenu_active {
 		color: #000;
-		border-bottom: 1px solid #000 ;
-	
+		border-bottom: 1px solid #000;
+
 	}
 }
 
 // Под Меню
-#service, #product {
+#service,
+#product {
 	ul {
 		li {
-			white-space :nowrap;
+			white-space: nowrap;
 			display: inline-flex;
 			justify-content: space-between;
 			padding-right: 12px;
 			margin-top: 8px;
 		}
-    a {
+
+		a {
 			@include tag_a_head(13px, #000, $color, solid);
 		}
 	}
+
 	.firstli {
 
 		font-weight: 800;
 		text-transform: uppercase;
+
 		span {
 			position: relative;
 			padding-left: 25px;
-			
+
 		}
 	}
 }
+
 .child_menu {
 	display: none;
 }
-.child_menu_show{
-	display:inherit;
+
+.child_menu_show {
+	display: inherit;
 }
-  
+
 
 #service span {
 	&::before {
 		@include before('../img/customer-support.svg', 20px)
 	}
 }
+
 #product span {
 	&::before {
 		@include before('../img/modem.svg', 20px)
 	}
 }
+
 //Блок баннеры продукции
 #trend_products {
 	@include center;
-	@include grid(49% 49%);
+	@include grid(49.4% 49.4%);
 }
+
 #one_product {
-	background: linear-gradient(45deg, #EECFBA, #C5DDE8);//rgb(228, 186, 238), $colorTwo
+	background: linear-gradient(45deg, #EECFBA, #C5DDE8); //rgb(228, 186, 238), $colorTwo
 	margin-top: 10px;
 	height: 400px;
 
-  .text_product {
+	.text_product {
 		width: 70%;
 		margin-top: 5px;
 		padding-left: 10px;
 		@include grid(auto auto auto);
 
-     p {
+		p {
 			position: relative;
-			 &::before {
-				 @include before('../img/check-symbol1.svg', 10px, 0px 5px)
-			 }
-      padding-left: 15px;
-		 }
+
+			&::before {
+				@include before('../img/check-symbol1.svg', 10px, 0px 5px)
+			}
+
+			padding-left: 15px;
+		}
 	}
+
 	.wrap_info_product {
 		width: 100%;
 		height: 100%;
@@ -213,84 +234,88 @@ header {
 		background-repeat: no-repeat;
 		background-position: right bottom;
 	}
-	h4,h3,p {
+
+	h4,
+	h3,
+	p {
 		padding-left: 10px;
 		color: $colorTextBaner
-		
 	}
+
 	h4 {
 		font-family: $fontTwo;
-		font-size:30px;
+		font-size: 30px;
 		letter-spacing: .2px;
 		text-transform: uppercase;
 		font-weight: 800;
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
+
 	h3 {
 		margin-top: 10px;
 	}
+
 	.text_product ul {
 		padding-left: 10px;
 		width: 70%;
 		list-style: circle;
 		list-style-position: inside;
-    display: inline-block;
+		display: inline-block;
 
 		li {
 			padding-left: 5px;
 		}
 	}
+
 	.text_product_price {
 		margin-top: 40px;
+
 		p {
 			font-size: 24px;
 			font-weight: 800;
-			font-family :$fontTwo;
+			font-family: $fontTwo;
 		}
 	}
+
 	.text_products_garant {
 		p {
 			font-size: 14px;
 		}
 	}
+
 	a {
-		margin-top: 30px;
-		margin-left: 10px;
-		display: block;
-		width: 25%;
 		border: 1px solid $colorTextBaner;
-		text-align: center;
-		padding: 6px;
-		text-transform: uppercase;
-		color:$colorTextBaner;
-		text-decoration: none;
-		font-size: 14px;
-		transition: all .5s ease 0s;
+		color: $colorTextBaner;
+
 		&:hover {
 			background: $colorTextBaner;
 			color: #fff;
 		}
 	}
 }
+
 #second_product {
 	margin-top: 10px;
-	background: linear-gradient(45deg, #453eb3, $colorThree);//rgb(228, 186, 238), $colorTwo
-	
+	background: linear-gradient(45deg, #453eb3, $colorThree); //rgb(228, 186, 238), $colorTwo
+
 	.text_product {
 		width: 70%;
 		margin-top: 5px;
 		padding-left: 10px;
 		@include grid(auto auto auto);
 
-     p {
+		p {
 			position: relative;
-			 &::before {
-				 @include before('../img/check-mark.svg', 10px, 0px 5px)
-			 }
-      padding-left: 15px;
-		 }
+
+			&::before {
+				@include before('../img/check-mark.svg', 10px, 0px 5px)
+			}
+
+			padding-left: 15px;
+		}
 	}
+
 	.wrap_info_product {
 		width: 100%;
 		height: 100%;
@@ -299,60 +324,60 @@ header {
 		background-repeat: no-repeat;
 		background-position: right bottom;
 	}
-	h4,h3,p {
+
+	h4,
+	h3,
+	p {
 		padding-left: 10px;
 		color: #fff
-		
 	}
+
 	h4 {
 		font-family: $fontTwo;
-		font-size:30px;
+		font-size: 30px;
 		letter-spacing: .2px;
 		text-transform: uppercase;
 		font-weight: 800;
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
+
 	h3 {
 		margin-top: 10px;
 	}
+
 	.text_product ul {
 		padding-left: 10px;
 		width: 70%;
 		list-style: circle;
 		list-style-position: inside;
-    display: inline-block;
+		display: inline-block;
 
 		li {
 			padding-left: 5px;
 		}
 	}
+
 	.text_product_price {
 		margin-top: 40px;
+
 		p {
 			font-size: 24px;
 			font-weight: 800;
-			font-family :$fontTwo;
+			font-family: $fontTwo;
 		}
 	}
+
 	.text_products_garant {
 		p {
 			font-size: 14px;
 		}
 	}
+
 	a {
-		margin-top: 30px;
-		margin-left: 10px;
-		display: block;
-		width: 25%;
 		border: 1px solid #fff;
-		text-align: center;
-		padding: 6px;
-		text-transform: uppercase;
-		color:#fff;
-		text-decoration: none;
-		font-size: 14px;
-		transition: all .5s ease 0s;
+		color: #fff;
+
 		&:hover {
 			background: $colorTextBaner;
 			color: #fff;
@@ -360,15 +385,149 @@ header {
 	}
 }
 
+.prduct_button {
+	margin-top: 30px;
+	margin-left: 10px;
+	display: block;
+	width: 25%;
+	text-align: center;
+	padding: 6px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 14px;
+	transition: all .5s ease 0s;
+}
 
+// Our Products
+#block_products {
+	transition: all .5s ease 0s;
+	@include center;
+}
 
+.header_h3 {
+	margin-top: 10px;
+  padding-bottom: 16px;
+	span {
+		border-bottom: 2px solid $color;
+	}
+}
 
+#products {
+	@include grid(24% 24% 24% 24%);
 
+	.item_card {
+		position: relative;
+		text-align: center;
+		height: auto;
+		margin-bottom: 10px;
+		background: #c9dbe3;
+		display: grid;
+		align-items: start;
 
+		img {
+			width: 100%;
+			transition: all .5s ease 0s;
+		}
 
+		h5 {
+			padding-left: 5px;
+			padding-right: 5px;
+			padding-top: 10px;
+			text-transform: uppercase;
+			font-size: 16px;
+			height: 50px;
+		}
 
+		&:hover img {
+			opacity: 0.4;
+		}
+		&:hover .buttonItem {
+			opacity: 1;
+		}
+		&:hover h5 {
+			opacity: 0.4;
+		}
+		a {
+			text-decoration: none;
+			color: $colorTextBaner;
+		}
+	}
+}
+.buttonItem {
+	transition: all .5s ease 0s;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
 
+	span {
+	
+		background: $color;
+		padding: 10px;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 14px;
+	}
+}
+// Мин транспорт блок
+#blockmtrfmit {
+	@include center;
+	@include grid(40% auto);
+	align-items: center;
+	border: 2px solid $color;
+	padding: 10px;
+	img {
+		width: 94%;
+	}
+  b {
+		color:$color;
+	}
+}
+#block_services {
+  @include center;
+}
+#services {
+	@include grid(49.4% 49.4%);
+}
+.item_service {
+	@include grid(60% auto);
+	margin-bottom:10px;
+	.item_service_text {
+		background: #e2d3c7;
+		h5 {
+			font-size: 16px;
+			text-transform: uppercase;
+			padding: 5px 5px 20px 10px;
+		}
+		 p{
+			 padding-left: 10px;
+			 font-size: 14px;
+		 }
+		 a {
+			 width: 80%;
+			 text-align: center;
+			 margin-left: 10px;
+			 margin-top: 40px;
+			 display: block;
+			 text-decoration: none;
+			 text-transform: uppercase;
+			 border: 1px solid $colorTextBaner;
+			 padding: 8px;
+			 font-size: 14px;
+			 color: $colorTextBaner;
+		 }
+	}
+}
+// Conatact
+#contact {
+	@include center;
 
+}
+.info_contact {
+	@include grid(auto auto)
+}
 
 
 
@@ -394,37 +553,47 @@ footer {
 	background: $color;
 	height: 220px;
 }
+
 #footer_info {
 	@include center;
 	@include grid(auto auto auto auto);
+
 	a {
 		@include tag_a_head(13px, #eee, #000, solid);
 	}
+
 	p {
 		position: relative;
 		padding-top: 4px;
 	}
 }
+
 #footer_crypt {
 	height: 50px;
 	font-size: 13px;
 	padding-top: 5px;
 	@include center;
 	@include grid(auto auto auto);
+	height: auto;
 }
+
 .foot_copy_link {
-  @include tag_a_head(13px, #000, $color, solid);
+	@include tag_a_head(13px, #000, $color, solid);
 }
+
 .mail_footer {
 	&::before {
 		@include before('../img/e-mail-envelope.svg', 20px, 0px 2px)
 	}
+
 	margin-left: 24px;
 }
+
 .phone_footer {
 	&::before {
 		@include before('../img/smartphonew.svg', 20px)
 	}
+
 	margin-left: 24px;
 }
 
@@ -445,23 +614,36 @@ footer {
 	#head_info {
 		grid-template-columns: auto auto auto;
 	}
+
 	#mtrf {
 		display: none;
 	}
-  
+
 }
+
 @media (max-width: 785px) {
 	#footer_info {
 		grid-template-columns: 20% auto auto auto;
+
 		#logo {
 			width: 100%;
 		}
 	}
 }
+
 @media (max-width: 414px) {
-  #head_info, #footer_info, #footer_crypt,  #head_menu {
+
+	#head_info,
+	#footer_info,
+	#footer_crypt,
+	#head_menuб,
+	#trend_products,
+	#block_products {
 		@include gridMob;
 		margin: 0 auto;
+	}
+	#block_products  {
+		display: grid;
 	}
 	#mobile_burger {
 		background: $color;
@@ -472,85 +654,125 @@ footer {
 		top: 0;
 	}
 
-	#head_menu {display: none;}
+	#head_menu {
+		display: none;
+	}
+
 	#head_info {
 		#logo {
-     width: 100%;
+			width: 100%;
 		}
+
 		#adres {
 			display: none;
 		}
+
 		#phone {
 			display: none;
 		}
+
 		#phone_mobile {
 			@include grid(80% auto);
 			align-items: center;
+
 			a {
 				@include tag_a_head(140%, #000, $color, none);
 				font-weight: 600;
-				
+
 			}
+
 			img {
 				width: 100%;
 			}
+
 			span {
 				color: $color;
 			}
 		}
 	}
+
 	footer {
 		height: 100%;
 		padding-bottom: 10px;
-		
+
 	}
+
 	#footer_info {
 		a {
 			@include tag_a_head(14px, #eee, #000, solid);
 		}
+
 		ul {
 			margin-top: 10px;
 		}
 	}
+
 	#footer_crypt {
 		.ya-share2 {
 			margin-top: 10px;
 		}
+
 		p {
 			margin-top: 10px;
 		}
 	}
+
 	#crypt {
 		margin-top: 10px;
 	}
+
 	#mobile_burger {
 		display: none;
-		@include  gridMob;
-		overflow:scroll;
+		@include gridMob;
+		overflow: scroll;
 		padding-bottom: 10px;
-	 .close_burger img {
+
+		.close_burger img {
 			width: 12%;
 			float: right;
 			padding-top: 10px;
 		}
+
 		a {
 			@include tag_a_head(13px, #eee, #000, solid);
 		}
+
 		ul {
 			margin-top: 10px;
+
 			li {
 				padding-bottom: 4px;
 			}
 		}
 	}
+
 	#logo_burger {
 		position: relative;
+
 		a {
 			@include tag_a_head(16px, #eee, #000, solid);
 			margin-top: 10px;
 		}
 	}
+
 	.show_burger {
 		display: none;
+	}
+
+	// Banners
+	.prduct_button {
+		width: 35%;
+	}
+
+	#second_product {
+		padding-bottom: 10px;
+	}
+	//products
+	#products {
+		justify-content: space-evenly;
+		grid-template-columns: 100%;
+	}
+	#products .item_card h5 {
+		font-size: 24px;
 	}
 }
