@@ -184,7 +184,8 @@ header {
   border-bottom: 1px solid #000;
 }
 
-#service ul li, #product ul li {
+#service ul li,
+#product ul li {
   white-space: nowrap;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -196,24 +197,28 @@ header {
   margin-top: 8px;
 }
 
-#service ul a, #product ul a {
+#service ul a,
+#product ul a {
   color: #000;
   font-size: 13px;
   text-decoration: none;
   border-bottom: 1px solid #000;
 }
 
-#service ul a:hover, #product ul a:hover {
+#service ul a:hover,
+#product ul a:hover {
   border-bottom: 1px solid #913BFB;
   color: #913BFB;
 }
 
-#service .firstli, #product .firstli {
+#service .firstli,
+#product .firstli {
   font-weight: 800;
   text-transform: uppercase;
 }
 
-#service .firstli span, #product .firstli span {
+#service .firstli span,
+#product .firstli span {
   position: relative;
   padding-left: 25px;
 }
@@ -248,9 +253,110 @@ header {
   left: 0;
 }
 
+#block_content {
+  margin: 0 auto;
+  max-width: 1070px;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-grid-columns: 20% 75%;
+      grid-template-columns: 20% 75%;
+}
+
+#sidebar {
+  margin-top: 5px;
+}
+
+#sidebar ul a {
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+#sidebar ul a:hover {
+  border-bottom: 1px solid #913BFB;
+  color: #913BFB;
+}
+
+#sidebar ul li {
+  padding-bottom: 5px;
+}
+
+#sidebar .firstli {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+#content {
+  margin-top: 15px;
+}
+
+#content h1 {
+  text-transform: uppercase;
+  font-size: 26px;
+  margin: 0;
+  border-bottom: 2px solid #913BFB;
+  display: inherit;
+}
+
+#content .service_info {
+  margin-top: 20px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-grid-columns: 58% 40%;
+      grid-template-columns: 58% 40%;
+}
+
+#content .service_info .price {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 15px;
+}
+
+#content .service_info .other_text button {
+  width: 60%;
+  text-align: center;
+  margin-top: 20px;
+  display: block;
+  background: #913BFB;
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 14px;
+  color: #fff;
+}
+
+#content .service_info .other_text button:hover {
+  background: none;
+  color: #913BFB;
+  border: 1px solid #913BFB;
+}
+
+#content .service_info .other_text h4 {
+  padding-bottom: 10px;
+}
+
+#content .service_info .other_text p {
+  padding-bottom: 3px;
+}
+
+#content .basic_content {
+  margin-top: 10px;
+}
+
 footer {
   background: #913BFB;
   height: 220px;
+  padding-top: 10px;
 }
 
 #footer_info {
@@ -284,9 +390,9 @@ footer {
 }
 
 #footer_crypt {
-  height: 50px;
   font-size: 13px;
   padding-top: 5px;
+  padding-bottom: 5px;
   margin: 0 auto;
   max-width: 1070px;
   height: 100%;
@@ -297,6 +403,7 @@ footer {
           justify-content: space-between;
   -ms-grid-columns: auto auto auto;
       grid-template-columns: auto auto auto;
+  height: auto;
 }
 
 .foot_copy_link {
@@ -363,7 +470,14 @@ footer {
 }
 
 @media (max-width: 414px) {
-  #head_info, #footer_info, #footer_crypt, #head_menu {
+  header {
+    background: #f4f4f4;
+  }
+  #head_info,
+  #footer_info,
+  #footer_crypt,
+  #head_menu,
+  #block_content {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
@@ -492,6 +606,28 @@ footer {
     color: #000;
   }
   .show_burger {
+    display: none;
+  }
+  #content h1 {
+    font-size: 25px;
+  }
+  #content .service_info {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  #content .service_info img {
+    width: 100%;
+  }
+  #content .service_info .other_text button {
+    width: 100%;
+  }
+  #content .service_info .other_text h4 {
+    padding-top: 10px;
+  }
+  #sidebar {
     display: none;
   }
 }
