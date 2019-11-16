@@ -406,7 +406,8 @@ header {
 
 .header_h3 {
 	margin-top: 10px;
-  padding-bottom: 16px;
+	padding-bottom: 16px;
+
 	span {
 		border-bottom: 2px solid $color;
 	}
@@ -441,18 +442,22 @@ header {
 		&:hover img {
 			opacity: 0.4;
 		}
+
 		&:hover .buttonItem {
 			opacity: 1;
 		}
+
 		&:hover h5 {
 			opacity: 0.4;
 		}
+
 		a {
 			text-decoration: none;
 			color: $colorTextBaner;
 		}
 	}
 }
+
 .buttonItem {
 	transition: all .5s ease 0s;
 	opacity: 0;
@@ -463,7 +468,7 @@ header {
 	-ms-transform: translate(-50%, -50%);
 
 	span {
-	
+
 		background: $color;
 		padding: 10px;
 		color: #fff;
@@ -471,88 +476,109 @@ header {
 		font-size: 14px;
 	}
 }
+
 // Мин транспорт блок
 #blockmtrfmit {
 	@include center;
-	@include grid(40% auto);
-	align-items: center;
-	border: 2px solid #c9dbe3;
 	padding: 10px;
+
 	img {
 		width: 94%;
 	}
-  b {
-		color:$color;
+
+	b {
+		color: $color;
+	}
+
+	.wrapmtrf {
+		@include grid(40% auto);
+		border: 2px solid #c9dbe3;
+		align-items: center;
 	}
 }
+
 #block_services {
-  @include center;
+	@include center;
 }
+
 #services {
 	@include grid(49.4% 49.4%);
 }
+
 .item_service {
 	@include grid(60% auto);
-	margin-bottom:10px;
+	margin-bottom: 10px;
+
 	img {
 		overflow: hidden;
 
 		z-index: 0;
 	}
+
 	.item_service_text {
 		background: #c9dbe3;
 		z-index: 10;
+
 		h5 {
 			font-size: 16px;
 			text-transform: uppercase;
 			padding: 5px 5px 20px 10px;
 			height: 60px;
 		}
-		 p{
-			 padding-left: 10px;
-			 font-size: 14px;
-		 }
-		 a {
-			 width: 80%;
-			 text-align: center;
-			 margin-left: 10px;
-			 margin-top: 40px;
-			 display: block;
-			 text-decoration: none;
-			 text-transform: uppercase;
-			 border: 1px solid $colorTextBaner;
-			 padding: 8px;
-			 font-size: 14px;
-			 color: $colorTextBaner;
-			 transition: all .5s ease 0s;
-		
-			 &:hover {
+
+		p {
+			padding-left: 10px;
+			font-size: 14px;
+		}
+
+		a {
+			width: 80%;
+			text-align: center;
+			margin-left: 10px;
+			margin-top: 40px;
+			display: block;
+			text-decoration: none;
+			text-transform: uppercase;
+			border: 1px solid $colorTextBaner;
+			padding: 8px;
+			font-size: 14px;
+			color: $colorTextBaner;
+			transition: all .5s ease 0s;
+
+			&:hover {
 				color: #fff;
 				background: $colorTextBaner;
-			 }
-		 }
-		 .price {
-	     font-family: $fontTwo;
-			 padding-left: 10px;
-			 padding-top: 20px;
-			 font-size: 18px;
-			 font-weight: bold;
-		 }
+			}
+		}
+
+		.price {
+			font-family: $fontTwo;
+			padding-left: 10px;
+			padding-top: 20px;
+			font-size: 18px;
+			font-weight: bold;
+		}
 	}
 }
+
 // Conatact
 #contact {
 	@include center;
-  padding-bottom: 20px;
+	padding-bottom: 20px;
 }
+
 .info_contact {
-	@include grid(auto auto);
+	@include grid(61% 38%);
+
 	.text_contact {
-		p, b {
+
+		p,
+		b {
 			padding-bottom: 5px;
 			padding-left: 10px;
 		}
 	}
+
 	a {
 		@include tag_a_head(14px, $color, #000, solid);
 	}
@@ -666,18 +692,24 @@ footer {
 	header {
 		background: #f3f3f3;
 	}
+
 	#head_info,
 	#footer_info,
 	#footer_crypt,
 	#head_menuб,
 	#trend_products,
-	#block_products {
+	#block_products,
+	#blockmtrfmit .wrapmtrf,
+	#contact,
+	#block_services{
 		@include gridMob;
 		margin: 0 auto;
 	}
-	#block_products  {
+
+	#block_products, #contact, #block_services {
 		display: grid;
 	}
+
 	#mobile_burger {
 		background: $color;
 		position: fixed;
@@ -796,16 +828,70 @@ footer {
 	.prduct_button {
 		width: 35%;
 	}
+	#one_product, #second_product {
 
+		h4 {
+			font-size: 25px;
+		}
+		
+	}
 	#second_product {
 		padding-bottom: 10px;
 	}
+
 	//products
 	#products {
 		justify-content: space-evenly;
 		grid-template-columns: 100%;
 	}
+
 	#products .item_card h5 {
 		font-size: 24px;
+	}
+
+	//Ministry
+	#blockmtrfmit .wrapmtrf {
+		p {
+			padding-top: 10px;
+		}
+	}
+
+	#blockmtrfmit img {
+		width: 100%;
+	}
+
+	//Services
+
+	#services, .item_service, .info_contact {
+		justify-content: space-evenly;
+		grid-template-columns: 100%;
+	}
+
+	.item_service img {
+		width: 100%;
+	}
+
+	.item_service {
+
+		.item_service_text {
+			a {
+				width: 92%;
+				margin: 20px auto;
+			}
+			h5 {
+				padding: 20px 5px 20px 10px;
+			}
+		}
+		//Contats
+	}
+	.info_contact {
+
+		.text_contact {
+     padding-top: 10px;	
+			p , b{
+				padding-left: 0px;
+				
+			}
+		}
 	}
 }
