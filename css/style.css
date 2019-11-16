@@ -580,7 +580,8 @@ header {
   margin: 0 auto;
   max-width: 1070px;
   height: 100%;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #blockmtrfmit img {
@@ -603,6 +604,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10px;
 }
 
 #block_services {
@@ -1000,6 +1002,13 @@ footer {
   }
   #products .item_card h5 {
     font-size: 24px;
+  }
+  #blockmtrfmit {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #blockmtrfmit .wrapmtrf {
+    padding: 0px;
   }
   #blockmtrfmit .wrapmtrf p {
     padding-top: 10px;

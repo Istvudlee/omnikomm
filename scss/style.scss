@@ -480,7 +480,8 @@ header {
 // Мин транспорт блок
 #blockmtrfmit {
 	@include center;
-	padding: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 
 	img {
 		width: 94%;
@@ -494,6 +495,7 @@ header {
 		@include grid(40% auto);
 		border: 2px solid #c9dbe3;
 		align-items: center;
+		padding: 10px;
 	}
 }
 
@@ -850,7 +852,12 @@ footer {
 	}
 
 	//Ministry
+	#blockmtrfmit {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 	#blockmtrfmit .wrapmtrf {
+		padding: 0px;
 		p {
 			padding-top: 10px;
 		}
