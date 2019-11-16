@@ -253,6 +253,30 @@ header {
   left: 0;
 }
 
+#breadcrumbs {
+  padding-top: 10px;
+  margin: 0 auto;
+  max-width: 1070px;
+  height: 100%;
+}
+
+#breadcrumbs a {
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+#breadcrumbs a:hover {
+  border-bottom: 1px solid #913bfb;
+  color: #913bfb;
+}
+
+#breadcrumbs .B_currentCrumb {
+  font-size: 14px;
+  color: #913bfb;
+}
+
 #block_content {
   margin: 0 auto;
   max-width: 1070px;

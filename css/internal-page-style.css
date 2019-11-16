@@ -334,6 +334,7 @@ header {
   font-size: 14px;
   color: #fff;
   cursor: pointer;
+  border: 1px solid #913BFB;
 }
 
 #content .service_info .other_text button:hover {
@@ -352,6 +353,18 @@ header {
 
 #content .basic_content {
   margin-top: 10px;
+}
+
+#content .basic_content ul {
+  list-style: disc;
+}
+
+#content .basic_content ul li {
+  padding-bottom: 4px;
+}
+
+#content .basic_content p {
+  padding-bottom: 4px;
 }
 
 footer {
