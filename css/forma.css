@@ -1,0 +1,167 @@
+.fullfon {
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(238, 206, 186, 0.9), rgba(197, 221, 232, 0.9));
+}
+
+.fullopen {
+  display: block;
+}
+
+.results {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  max-width: 500px;
+  padding: 40px;
+  background: #c9dbe3;
+  color: #fff;
+  z-index: 150;
+}
+
+.results h6 {
+  font-size: 22px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.results p {
+  font-size: 16px;
+}
+
+/* Forma */
+.blockforma {
+  top: 0;
+  left: 0;
+  line-height: normal;
+  position: fixed;
+  z-index: 10;
+  border: 1px solid #913BFB;
+  background: #3f3a3a;
+  max-width: 650px;
+  color: #fff;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-grid-columns: 92%;
+      grid-template-columns: 92%;
+  text-align: center;
+}
+
+.blockforma h5 {
+  position: relative;
+  font-size: 20px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  line-height: 40px;
+}
+
+.blockforma h5::before {
+  display: block;
+  content: '';
+  background-image: url("../img/consultation.svg");
+  background-size: 42px 42px;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background-position: 95px 0px;
+  height: 40px;
+}
+
+button[type="submit"] {
+  background: #913BFB;
+  border: 1px solid #913BFB;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 5px;
+  padding: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: none;
+  border: 1px solid #913BFB;
+  color: #913BFB;
+}
+
+.show-form {
+  display: none;
+}
+
+.blockforma form {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-grid-columns: 70%;
+      grid-template-columns: 70%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blockforma form input {
+  margin-bottom: 5px;
+  padding: 15px;
+  background: none;
+  border: 1px solid #913BFB;
+}
+
+.blockforma form input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.blockforma form input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.blockforma form input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.blockforma form input::placeholder {
+  color: #fff;
+}
+
+#textch {
+  padding-top: 40px;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 40px;
+}
+
+#textch input {
+  margin: 0;
+}
+
+#textch p {
+  padding-left: 5px;
+}
+
+#textch a {
+  color: #913BFB;
+}
+
+.off {
+  display: none;
+}
+
+/* end Forma */
+/*# sourceMappingURL=forma.css.map */
