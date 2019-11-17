@@ -9,7 +9,7 @@ let breadcrumbs = document.getElementById('breadcrumbs');
 let fullfon = document.querySelector('.fullfon');
 let blockforma = document.querySelector('.blockforma');
 let button_form = document.querySelectorAll('#callback, .prduct_button, #callback2');
-
+let closeForm = document.getElementById('close_form');
 click_menu.forEach(item => item.addEventListener('click', clickMenuChild));
 
 
@@ -51,12 +51,19 @@ button_form.forEach(item => item.addEventListener('click', (e) => {
 	e.preventDefault();
 	blockforma.classList.remove('show-form');
 	fullfon.classList.add('fullopen');
-	blockforma.style.left = document.documentElement.clientWidth/2 - blockforma.offsetWidth/2 +'px';
-	blockforma.style.top = document.documentElement.clientHeight/2 - blockforma.offsetHeight/2 +'px';
+	if(document.documentElement.clientWidth > 750) {
+		blockforma.style.left = document.documentElement.clientWidth/2 - blockforma.offsetWidth/2 +'px';
+	  blockforma.style.top = document.documentElement.clientHeight/2 - blockforma.offsetHeight/2 +'px';
+	}
+	
 }));
 
 //Close click black fon form 
 fullfon.addEventListener('click', (e) => {
 	e.target.classList.remove('fullopen');
+	blockforma.classList.add('show-form');
+});
+closeForm.addEventListener('click', (e) => {
+	fullfon.classList.remove('fullopen');
 	blockforma.classList.add('show-form');
 });
