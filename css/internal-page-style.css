@@ -253,6 +253,30 @@ header {
   left: 0;
 }
 
+#breadcrumbs {
+  padding-top: 10px;
+  margin: 0 auto;
+  max-width: 1070px;
+  height: 100%;
+}
+
+#breadcrumbs a {
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+#breadcrumbs a:hover {
+  border-bottom: 1px solid #913BFB;
+  color: #913BFB;
+}
+
+#breadcrumbs .B_currentCrumb {
+  font-size: 14px;
+  color: #913bfb;
+}
+
 #block_content {
   margin: 0 auto;
   max-width: 1070px;
@@ -321,6 +345,11 @@ header {
   font-weight: bold;
   font-size: 20px;
   padding-top: 15px;
+}
+
+#content .service_info img {
+  width: 100%;
+  border: 1px solid #eee;
 }
 
 #content .service_info .other_text button {
@@ -621,6 +650,21 @@ footer {
   }
   .show_burger {
     display: none;
+  }
+  #breadcrumbs {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-grid-columns: 92%;
+        grid-template-columns: 92%;
+  }
+  #breadcrumbs a {
+    font-size: 12px;
+  }
+  #breadcrumbs .B_currentCrumb {
+    font-size: 12px;
   }
   #content h1 {
     font-size: 25px;

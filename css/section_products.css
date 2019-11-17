@@ -637,6 +637,21 @@ footer {
   .show_burger {
     display: none;
   }
+  #breadcrumbs {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-grid-columns: 92%;
+        grid-template-columns: 92%;
+  }
+  #breadcrumbs a {
+    font-size: 12px;
+  }
+  #breadcrumbs .B_currentCrumb {
+    font-size: 12px;
+  }
   #content h1 {
     font-size: 25px;
   }
